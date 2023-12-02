@@ -2,6 +2,7 @@ package day01
 
 import println
 import readInput
+import util.checkResult
 import java.util.NoSuchElementException
 
 fun main() {
@@ -58,10 +59,4 @@ fun main() {
 
 private fun String.firstAndLastDigit(): Int {
     return "${this.first { it.isDigit() }}${this.last { it.isDigit() }}".toInt()
-}
-
-fun checkResult(expected: Any, result: Any) {
-    check(result == expected) {
-        println("Expected $expected, but was $result")
-    }
 }
